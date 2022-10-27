@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-06-form</title>
+    <style>
+        header{
+            text-align: center;
+        }
+        h1{
+           color: rgb(14, 1, 12); 
+        }
+        strong{
+            color:rgb(0, 0, 0) ;
+        }
+        main{
+            background-color: rgb(212, 208, 216);
+            border-radius:10px;
+            padding:30px;
+            width: 320px;
+            margin: 0 auto
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+         <h1>CRIE SEU PERFIL</h1>
+    </header>
+    <main>
+        <form action="" method="get">
+            <fieldset>
+                <legend>
+                    <strong>DADOS PESSOAIS</strong>
+                </legend> 
+              <section>
+                <label for="Nome">Nome:</label>
+               <input id="name" type="text" autofocus required placeholder="Digite seu nome">
+              </section>
+
+              <br>
+              <section>
+                <label for="birth">Nascimento</label>
+                <input id="birth" type="date">
+              </section>
+
+              <br>
+              <section>
+                <label for="RG">RG:</label>
+                <input id="RG" type="number" placeholder="Digite sua RG" required pattern="{0-9}[11]">
+              </section>
+
+              <br>
+              <section>
+                <label for="CPF">CPF:</label>
+                <input id="CPF" type="number"required placeholder="Digite seu CPF"pattern="{0-9}[11]">
+              </section>
+
+               <br>
+               <section>
+                <label for="Masculino">Masculino</label>
+                <input id="Masculino" type="radio" name="sexo">
+
+                <label for="Feminino">Feminino</label>
+                <input type="radio" name="sexo" id="Feminino">
+               </section>
+            </fieldset>
+
+                  <br>
+            <fieldset>
+                <legend> 
+                    <strong>LINGUAGEM DE DOMÍNIO</strong>
+                </legend>
+
+                <section>
+                    <span>
+                        <input id="html" type="checkbox">
+                        <label for="html">HTML</label>      
+                    </span>
+
+                    <span>
+                        <input id="css" type="checkbox">
+                        <label for="css">CSS</label>      
+                    </span>
+
+                    <span>
+                        <input id="javaScript" type="checkbox">
+                        <label for="javaScript">JavaScript</label>      
+                    </span>
+
+                    <span>
+                        <input id="sql" type="checkbox">
+                        <label for="sql">SQL</label>      
+                    </span>
+                </section>
+
+            </fieldset>
+
+                <br>
+            <fieldset>
+                <legend>
+                    <strong>DADOS DE LOGIN</strong>
+                </legend>
+                <section>
+                    <label for="E-mail">E-mail:</label>
+                    <input type="email" id="email" autocomplete="email" name="email" placeholder="fulano@gmail.com">
+                </section>
+
+                <br>
+                <section>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" minlength="8" required placeholder="Mínimo de 8 caracteres">
+                </section>
+
+                <br>
+                <section>
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto" accept="image/*">
+                </section>
+
+                <br>
+            </fieldset>
+
+            <br>
+            <Fieldset>
+                <legend>
+                  <strong>Observações</strong> 
+                </legend>
+            <section>
+                <textarea name="obs" id="obs" cols="36" rows="10" placeholder="Escreva suas observações" maxlength="250"></textarea>
+            </section>
+            </Fieldset>
+
+            <br>
+            <button type="submit">Salvar</button>
+            <button type="submit">Limpar</button>
+        </form>
+    </main>
+</body>
+</html>

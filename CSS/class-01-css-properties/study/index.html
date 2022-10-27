@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-01-CSS-Properties</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet"> -->
+
+    <style>
+       /* <!-- CSS: Cascading Style Sheets
+                Syntax: Selector > Declaration > Propertie > Value 
+        -->
+
+        <!--
+            Colorimetry:
+                -Properties
+                    background-color (para caixas)
+                    color (para textos)
+                    border-color (para caixas)
+                -Values
+                    palavra-chave (blue, transparent)
+                    hexadecimal (#990AFF)
+                    funções: 
+                        rgb, rgba: RED, GREEN, BLUE, ALPHA
+                            Ex: rgb(0, 255, 64, 0.6);
+                        hsl, hsla: HUE(DEGREE), SATURATION(%), LIGHTNESS(%), ALPHA(%)
+                            Ex: hsl(180, 100%, 50%, 60%)
+        -->
+        
+        <!-- Especificity:
+            0 = * Seletor universal
+            1 = Elementos (tags) h1, p, img, span... 
+            10 = Class Ex: (.class)
+            100 = ID Ex: (#id)
+            1000 = Inline
+            !important. 
+        -->
+        
+        <!-- 
+            Typography:
+                -font-family: "Times New Roman", Times, serif; (fallback)
+                -font-weight: bold; (400, 700, 800)
+                -font-style: normal; (italic, oblique)
+                
+                -font-size: "value";
+                    16px - Absoluty
+                    2rem - Relative
+                    50% - Relative
+                -letter-spacing: 4px;
+                -word-spacing: 1em;
+                -line-height: 1.5;
+                -text-transform: uppercase; (lowercase, capitalize, none)
+                -text-decoration: wavy(dashed, dotted) overline (underline, line-through) blue;
+                -text-align: center; (start, end, left, right, justify)
+                -text-shadow: 1px 1px 2px red; (offset-x | offset-y | blur-radius)
+                
+                -Web-Fonts
+                    link
+                    @import
+        -->
+        
+        <!-- 
+            Background:
+                -background-color: rgb(55, 100, 50);
+                -background-image: url("image.jpg"), linear-gradient(lightblue, lightgreen);
+                -background-size: 240px auto;
+                -background-size: contain;
+                -background-repeat: no-repeat;
+                -background-position: center top;
+                -background-attachment: fixed;
+        -->
+     */
+
+       h1{
+        font-size: 36px;
+       }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="image"></div>
+    
+    <h1 class="testo">Estudo do CSS</h1>
+    <p class="Texto">CSS - Cacading Style Sheets</p>
+    <span>
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis maxime facilis repellat quia deserunt eaque ad nisi, dignissimos velit error assumenda aspernatur, vero fugit. Accusantium, sed? Debitis molestiae nobis quos.
+        </p>
+    </span>
+
+    <p class="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ad numquam accusantium rem, quisquam corrupti, deleniti distinctio sed ut qui suscipit recusandae quas, porro exercitationem. Vitae eum amet hic nisi.
+    </p>
+
+    <p id="ultimoTexto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus ea neque dolores, nostrum qui non error debitis deserunt voluptas rem minima laboriosam vitae doloremque veritatis, accusantium cum. Necessitatibus, deleniti.
+    </p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+h1, p{
+    color: rgb(112, 103, 209);
+    font-size: 50px;
+}
+
+p{
+    font-size: 24px;
+    color: rgb(130, 8, 245);
+}
+
+span p{
+    color: rgb(161, 111, 219);
+}
+
+.texto {
+    color: rgb(101, 86, 189);
+}
+
+#ultimoTexto {
+    color: rgb(91, 63, 219);
+}
+
+body{
+    background: linear-gradient(rgb(47, 47, 221), rgb(81, 81, 192) );
+    font-family: 'Bungee Spice', cursive;
+    background:rgb(229, 221, 241) ;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1;
+    white-space: 1;
+    line-height: 1;
+    /* text-transform: capitalize; */
+    /* text-align: center; */
+    text-shadow: 1px 1px 1px black ;
+    /* background-image: url(image/azul-claro.webp);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right; */
+}
+
+div.image{
+    
+    /* background: linear-gradient(130deg, pink, purple);
+    background-attachment:fixed;
+    width: auto;
+    height: 120px;
+    background-image: url(image/azul-claro.webp);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center; */
+
+    background-color: rgb(55, 100, 50);
+    background-image: url("image/azul-claro.webp"), linear-gradient(lightblue, lightgreen);
+    background-size: 240px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+}
+

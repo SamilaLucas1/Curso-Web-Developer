@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-06-formulário</title>
+    <style>
+        /* body{
+            text-align: center;
+        } */
+
+        label{ 
+            width: 80px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .area-01{
+            background-color: rgb(226, 223, 230);
+            border-radius: 8px;
+        }
+        main{
+            background-color: rgb(224, 213, 228);
+            border-radius:10px;
+            padding:30px;
+            width: 320px;
+            margin: 0 auto
+        }
+    </style>
+</head>
+<body>
+    <main>
+ <fieldset class="area-01"> 
+    <legend>Dados Pessoais</legend>
+    <section>
+        <form action="" method="get">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" placeholder="Escreva seu nome" autocomplete="name" name="nome" autofocus required>
+    </section>
+
+    <br>
+    <section>
+        <label for="birth">Nacimento:</label>
+        <input type="date" id="birth" name="Nacimento">
+    </section>
+
+    <br>
+    <button type="submit">Enviar</button>
+ </form>
+</fieldset>
+
+
+<br>
+   <fieldset>
+    <legend>Tipos de input</legend>
+    <form action="">
+        <label for="fruits">Frutas:</label>
+        <input type="text" id="fruits" name="frutas" list="List-fruits" placeholder="Sua fruta favorita">
+
+        <datalist id="List-fruits">
+           <option value="Pêra"></option>
+           <option value="Maçã"></option>
+           <option value="Manga"></option>
+        </datalist>
+        <button type="submit">Enviar</button>
+    </form>
+   </fieldset>
+
+   <br>
+   <fieldset>
+    <form>
+    <section>
+        <label for="">E-mail:</label>
+        <input type="email" autocomplete="email" name="email" placeholder="Digite seu e-mail" minlength="8">
+    </section>
+
+    <section>
+        <br>
+        <label for="">Senha:</label>
+        <input type="password" name="senha" placeholder="Digite sua senha"  minlength="8">
+    </section>
+
+    <section>
+        <br>
+        <label for="">CPF:</label>
+        <input type="text" pattern="{0-9}[11]" placeholder="Digite seu CPF" required>
+    
+    </section>
+
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+   </fieldset>
+
+   <!-- pattern="[0-9][a-zA-Z]" -->
+   <!-- pattern="[0-9][a-zA-Z]{11}" -->
+   <!-- min="5" max="100"
+   step="5" style="width: 170px;"  -->
+
+    <br>
+    <h1>Segunda parte Form</h1>
+    <form action="">
+        <fieldset>
+            <legend>Arquivo</legend>
+            <label for="photo">Foto</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            <!-- accept:"image/*", "video/",".doc" -->
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Filmes Favoritos</legend>
+            
+            <section>
+            <label for="Titanic">Titanic</label>
+            <input type="checkbox" name="Titanic" id="Titanic"> 
+            </section>
+            
+            <section>
+                <label for="Lagoa Azul">Lagoa Azul</label>
+                <input type="checkbox" name="Lagoa Azul" id="Lagoa Azul"> 
+                </section>
+        </fieldset>
+
+
+        <br>
+        <fieldset>
+            <legend>Termos de uso</legend>
+        <label for="yes">Sim</label>
+        <input type="radio" name="term" id="yes" value="termYes">
+
+        <label for="not">Não</label>
+        <input type="radio" name="term" id="not" value="termNot">
+        </fieldset>
+
+        <fieldset>
+            <legend>Observações</legend>
+            <textarea name="obs" id="obs" cols="30" rows="10" placeholder="Escreva suas observações" maxlength="250"></textarea>
+        </fieldset>
+    </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+span.imagem{
+    background-image: url("/CSS/class-01-css-properties/image/bolos-de-aniversario.webp"), linear-gradient(lightblue, lightgreen);
+    background-size: 240px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    
+}
+
+main{
+    background-color: #A7C6D9;
+    height: 480px;
+    width: 320px;
+    background: linear-gradient(360deg, #022859, #A7C6D9 );
+    margin:auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 4px black;
+    font-family: 'Permanent Marker', cursive;
+}

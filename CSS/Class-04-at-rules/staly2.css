@@ -1,0 +1,46 @@
+@charset "uft-08";
+
+/* @import url("../Class-02-box-model/study/style.css"); */
+
+@font-face {
+    font-family: playFont;
+    src: url("fontes/zrnic\ rg.ttf");
+}
+
+h1{
+    font-family: playFont;
+    animation: myAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: alternate ;
+    animation-timing-function: ease-in-out;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    h1{ 
+        color: aqua;
+    }
+}
+
+@keyframes myAnimation {
+        0% {
+        opacity: 0.2;
+        transform: rotate(0deg);
+        }
+        
+        50%{
+        color: blue;
+        }
+
+        100% {
+        opacity: 1;
+        /* transform: rotate(360deg); */
+        transform:scale(1.2) ;
+        }
+}
+
+
+/* div{
+    font-size: 32px;
+} */

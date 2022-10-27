@@ -1,0 +1,101 @@
+@import url(style.css);
+
+.boxPlans{
+    animation: topDownOpacityAnimation 2000ms;
+}
+
+aside h1{
+    font-size: 48rem;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1rem 1rem 2rem rgb(0, 0, 0);
+}
+
+aside table {
+    font-size: 13rem;
+    padding: 8rem;
+    margin-top: 32rem;
+
+    border: solid white;
+    border-radius: 8rem;
+
+    background: rgb(110, 104, 104);
+
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+.tablepromotion{
+    color: brown;
+}
+
+aside table td{
+    padding: 4rem;
+}
+
+aside p{
+    text-align: center;
+    margin-top: 8rem;
+}
+
+main h1{
+    color: white;
+    font-size: 40rem;
+    text-shadow: 1rem 1rem 2rem black;
+    text-align: center;
+    
+}
+
+.vinhos{
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+}
+
+.boxVinhoPromocinal {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.imagemVinhoPromocinal{
+    width: 50;
+    height: 100%;
+    object-fit: cover;
+}
+
+main h2 {
+    margin-top: 32rem;
+    text-align: center;
+    background: linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255));
+    color: black;
+    
+}
+
+.vinho {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(min-width: 480px) {
+    /* header img{
+        width: 80rem;
+    } */
+
+    .boxPlans{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .boxPlans aside{
+        position: sticky;
+        top: 0rem;
+    }
+} 

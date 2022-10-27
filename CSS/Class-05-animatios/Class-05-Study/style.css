@@ -1,0 +1,69 @@
+h1:hover{
+    color: blue;
+}
+
+h2{
+    transition: 3s;
+    transition: 300ms;
+}
+
+h2:hover{
+    color: blue;
+    transform: scale(1.1);
+    transform: rotate(200deg);
+    transform: rotateX(360deg);
+    transform: translateX(20px);
+}
+
+
+.square {
+    height: 120px;
+    width: 120px;
+    background: red;
+
+    transition: 300ms;
+}
+
+.square:hover{
+    transform: rotate(720deg);
+}
+
+.Loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-loading{
+    position: absolute;
+
+}
+
+.cirlcle-loading{
+    height: 120px;
+    width: 120px;
+    border: 16px solid lightgray;
+    border-top-color: blue;
+
+    animation-name: MyRotateAnimation;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+
+    border-radius: 50%;
+
+    animation-timing-function: linear;
+    /* animation-direction: alternate; */
+    /* animation-delay: 3s */
+    /* animation-timing-function: ease-in; */   
+}
+
+@keyframes
+MyRotateAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
