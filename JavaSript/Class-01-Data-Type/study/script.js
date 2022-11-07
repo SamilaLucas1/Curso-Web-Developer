@@ -63,3 +63,56 @@ let total = num1 + num2
 //console.log("Num1 = " + num1)
 console.log("A soma de " + num1 + " e " + num2 + " é " + total)
 console.log(`A soma de ${num1} e ${num2} é igual a ${total}`)
+
+// >>> Type Structutal (Object, Functions) <<<
+
+//let name ="Samila"
+//let age = 18
+//let profission = "Web developer"
+
+person ={
+    name: "Júlia",
+    age: 17,
+    profission: "Web developer",
+}
+
+//console.log(name)
+//console.log(age)
+//console.log(profission)
+
+//console.log(typeof person)
+//console.log(person)
+//console.log(person.name)
+//console.log(person.age)
+//console.log(`${person.name} tem ${person.age} anos e é ${person.profission}`)
+
+// Array (Vetor)
+
+//countries = ["Brasil","Alemanha", "Espanha"]
+countries = ["Brasil", 5, "Alemanha", 4, "Espanha", 1]
+countries = [["Brasil", 5], ["Alemanha", 4], ["Espanha", 1]]
+
+//console.log(typeof countries)
+//console.log(countries)
+console.log(countries [2])
+console.log(countries [2] [0])
+
+countries = [
+    {
+        name: "Brasil",
+        champions: 5
+    },
+
+    {
+        name: "Alemanha",
+        champions: 4
+    },
+
+    {
+        name: "Espanha",
+        champions: 1
+    },
+]
+
+let country = 0
+console.log(`${countries[country].name} tem ${countries[country].champions} título(s)`)
