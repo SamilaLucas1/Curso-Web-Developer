@@ -9,7 +9,7 @@ const mult = numberOne * numberTwo
 const div = numberOne / numberTwo
 const res = numberOne % numberTwo
 const pot = numberOne ** numberTwo
-const sqr = numberOne ** (1/numberOne)
+const sqr = numberOne ** (1/numberTwo)
 
 document.write(`A Soma de ${numberOne} e ${numberTwo} é: ${sum} <br>`)
 document.write(`A Subtração de ${numberOne} e ${numberTwo} é: ${sub} <br>`)
