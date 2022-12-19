@@ -76,6 +76,8 @@ person ={
     profission: "Web developer",
 }
 
+console.log(person)
+
 //console.log(name)
 //console.log(age)
 //console.log(profission)
