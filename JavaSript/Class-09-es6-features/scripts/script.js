@@ -66,3 +66,40 @@ function person(name, age) {
 let person1 = person('Samila', 30)
 
 console.log(person1.status());
+
+// Destructure
+const array = ["A", "B"]
+const [item1, item2] = array
+console.log(array, item1, item2)
+
+
+//Rest
+function showArray(array, ...numbers) { //imprime todos/ ...number pode ser colocado para imprimir mais coisa
+    console.log(array, numbers) 
+}
+
+// showArray(2, 3, 4, 5, 3)
+
+//Spread = espalhar
+
+const numbers = [2, 3, 4, 5, 3]
+// const clone = [...numbers]
+const [...clone] = numbers
+clone.pop()
+
+console.log(numbers)
+
+// console.log(Math.max(...numbers))
+console.log(numbers)
+console.log(clone)
+
+const list = document.querySelectorAll('div')
+console.log(list) [list].map((value) => console.log(value))
+
+let num;num = 7 
+console.log(num)
+
+// ASI (Automatic Semicolon Insertion)
+
+//Babel (ES6 to ESS)
+//- Parser: Code 6 to AST (Abs)
