@@ -42,3 +42,13 @@ insert into curso values
     
 select * from curso;
 describe curso;
+
+ALTER TABLE estudantes ADD course TINYINT UNSIGNED;
+ALTER TABLE estudantes ADD FOREIGN KEY(course) REFERENCES courses(id);
+
+UPDATE estudantes SET course = 3 WHERE id = 1;
+SELECT * FROM estudantes;
+
+SELECT estudantes.id, estudantes.name, courses.name FROM estudantes JOIN courses ON estudantes.course = courses.id;
+
+USE school;
