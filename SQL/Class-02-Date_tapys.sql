@@ -1,54 +1,53 @@
-use school;
-
-drop table studants;
-
-create table studants(
-	id smallint unsigned primary key auto_increment,
-	name varchar(50) not null,
-    cpf varchar(11) unique not null,
-    birth_year date not null,
-    city varchar(20) default 'Jucás'
+DROP  TABLE alunos;
+CREATE  TABLE  alunos (
+	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR ( 40 ) NOT NULL ,
+    cpf VARCHAR ( 11 ) ÚNICO NÃO NULO ,
+    ano_nascimento DATE  NOT NULL ,
+    gênero ENUM( ' M ' , ' F ' ) NÃO NULO ,
+    cidade VARCHAR ( 30 ) PADRÃO " Jucás " ,
+    c_desempenho DECIMAL ( 5 , 2 ),
+    assinatura TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-select * from studants;
-describe studants;
+DESCREVA alunos;
 
-insert into studants values
-(default, 'Samila', "12345678900", "2004-09-30", default),
-(default, 'Clara', "09876543211", "2004-09-30", default),
-(default, 'Emanuel', "98765432111", "2004-09-30", default),
-(default, 'Murilo', "87654321234", "2004-09-30", default);
+INSERT INTO alunos (nome, cpf, ano_nascimento, sexo, desempenho_c)
+VALORES ( " João " , " 12345678900 " , " 1989-12-25 " , " M " , 89 . 2 );
 
-select 
-	name, birth_year, 
-    current_date() Hoje,
-    floor(datediff(current_date, birth_year)/ 365.25) Idade
-from studants;
+INSERIR NOS VALORES DOS ALUNOS 
+(PADRÃO, " Pedro " , " 12345678901 " , " 1998-02-12 " , " M " , PADRÃO, 90,75 , PADRÃO ) ,
+(DEFAULT, " Maria " , " 12345678902 " , " 1995-06-23 " , " F " , DEFAULT, 95 , DEFAULT);
 
--- Crie uma tabela curso: Id, nome, carga
--- Insira os cursos: programador web 160, ferramentas digitais 120, empreendedorismo 20.alter
+SELECIONE  *  DE alunos;
+SELECIONE 
+	ID AS ID,
+    nome AS Nome,
+    c_desempenho AS CR,
+    curso AS Curso
+DE alunos
+PEDIDO POR CR
+ LIMITE  DESC 10 ;
 
-drop table curso;
+SELECIONE 
+	nome AS Nome,
+    ano_nascimento AS Nascimanto,
+    CURDATE() Hoje,
+    FLOOR(DATEDIFF( CURRENT_DATE (), birth_year) /  365 . 25 ) Idade
+DE alunos;
 
-create table curso(
-	id smallint unsigned primary key auto_increment,
-	name varchar(50) not null,
-    carga tinyint unsigned);
+ Cursos de DROP TABLE ;
+CREATE  TABLE  cursos (
+	id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    nome varchar ( 40 ) NÃO NULO ,
+    horas TINYINT UNSIGNED
+);
 
-insert into curso values 
-	(default, 'Programador Web', 160),
-    (default, 'Ferramentas Digitais', 120),
-    (default, 'Empreendedorismo', 20);
-    
-select * from curso;
-describe curso;
+DESCREVA os cursos;
 
-ALTER TABLE estudantes ADD course TINYINT UNSIGNED;
-ALTER TABLE estudantes ADD FOREIGN KEY(course) REFERENCES courses(id);
+INSERIR NOS VALORES dos cursos
+(DEFAULT, ' Programador Web ' , 240 ),
+(PADRÃO, ' Ferramentas Digitais ' , 160 ),
+(DEFAULT, ' Informática para o Mundo do Trabalho ' , 160 );
 
-UPDATE estudantes SET course = 3 WHERE id = 1;
-SELECT * FROM estudantes;
-
-SELECT estudantes.id, estudantes.name, courses.name FROM estudantes JOIN courses ON estudantes.course = courses.id;
-
-USE school;
+SELECIONE  *  DE cursos;
