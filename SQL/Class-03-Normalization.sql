@@ -38,3 +38,33 @@ insert into studants (name, street, neighborhood, city, course) values
 select studants.name, courses.name from studants
 inner join courses
 on studants.course = courses.id;
+
+create table phones (
+	id smallint unsigned auto_increment not null,
+    number varchar(255) not null,
+    studant smallint unsigned not null,
+    primary key(id),
+    foreign key(studant) references studants(id)
+    -- on delete cascade = delete por cascadas
+);
+
+describe phones;
+
+insert into phones (number, studant) values
+('(88)8888-8888', 1),
+('(88)9999-9999', 1),
+('(88)0000-0000', 2),
+('(88)1111-1111', 3);
+
+select * from phones;
+
+
+select * from studants inner join phones on studants.id = phones.id;
+
+select studants.name, phones.number from phones
+ inner join studants 
+ on studants.id = phones.studant;
+ 
+SELECT * FROM studants;
+DELETE FROM studants WHERE id = 1;
+-- apaga o primeiro estudante da lista, obrigatorio on delete cascade
