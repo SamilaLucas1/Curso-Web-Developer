@@ -3,14 +3,22 @@
 main{
     padding: 16rem;
     text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .form-contact{
     animation: topDownOpacityAnimation 2000ms;
+    margin-top: .8rem;
+    display: grid;
+    gap: 4.8rem;
+    align-items: last baseline;
+    justify-content: center;
 }
 
 main h1{
-    background: brown;
+    background: rgb(156, 30, 30);
     color: white;
     padding: 16rem;
     text-align: center;
@@ -21,12 +29,20 @@ main h1{
     display: none;
 }
 
+.number {
+    text-align: center;
+    align-items: end;
+    justify-items: end;
+    font-size: 16rem;
+    padding-top: 0rem;
+}
+
 fieldset{
     padding: 16rem;
     border-radius: 0rem 0rem 8rem 8rem;
 
-    background: rgba(200, 77, 77, 0.3);
-    border: solid 1rem #E0412F;
+    background: rgba(46, 45, 45, 0.3);
+    border: solid 1rem #fcfcfc;
 }
 
 .inputBox label{
@@ -40,11 +56,11 @@ fieldset{
     padding: 4rem;
     
     border-radius: 4rem;
-    border: solid 1rem #E0412F;
+    border: solid 1rem #ffffff;
 }
 
 .inputBox input:focus, .inputBox select:focus, .inputBox textarea:focus{
-    outline: solid 1rem #E0412F;
+    outline: solid 1rem #be574b;
 }
 
 .inputBox textarea{
