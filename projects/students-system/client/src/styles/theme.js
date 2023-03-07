@@ -1,8 +1,8 @@
 export const theme = {
     colors: {
-        main1: '#024040',
-        main2: '#23D9D9',
-        main3: '#088B8B',
+        main1: '#23D9D9',
+        main2: '#088B8B',
+        main3: '#024040',
         complementary1: '#401800',
         complementary2: '#8C3908',
         background: '#252525',
