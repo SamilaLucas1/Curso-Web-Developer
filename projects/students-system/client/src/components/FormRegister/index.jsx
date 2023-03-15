@@ -30,7 +30,7 @@ export function FormRegister() {
 
                 <section>
                 <label htmlFor="phone">Telefone:</label>
-                <InputMask mask={"(99) 9999-9999"} maskChar=" " type="tel" id="phone" {...register("phone", {required: true} )} placeholder="(00) 0000-0000"/>
+                <InputMask mask= "(99) 9999-9999" maskChar=" " type="tel" id="phone" {...register("phone", {required: true} )} placeholder="(00) 0000-0000"/>
 
                 {errors.phone && <span className="error">Campo obrigatório</span>}
                 </section>
