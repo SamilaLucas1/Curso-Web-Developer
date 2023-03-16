@@ -4,9 +4,21 @@ import axios from "axios";
 import Table from 'react-bootstrap/Table';
 import { BsSearch } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";
+import Modal from 'react-bootstrap/Modal';
+import { FormUpdate } from "../FormUpdate";
 
 export function HandleStudents() {
     const [listStudents, setlistStudents] = useState([]);
+    const [showModal, setshowModal] = useState(false);
+    const [studentData, setstudentData] = useState({});
+
+    const modalOpen = (studentID) => {
+        setshowModal(true)
+        const student = listStudents.findIndex(student => student.id == studentID);
+        setstudentData(listStudents[student]);
+    };
+
+    const modalClose = () => setshowModal(false);
 
     const API = "http://localhost:3000/students";
 
@@ -56,13 +68,24 @@ export function HandleStudents() {
                                 <td>{students.phone}</td>
                                 <td>{students.city}</td>
                                 <td>
-                                    <BiEdit className="editIcon"/>
+                                    <BiEdit className="editIcon" onClick={() => modalOpen(students.id)}/>
                                 </td>
                             </tr>
                             )
                         })}  
                     </tbody>
             </Table>
+                </section>
+
+                <section>
+                <Modal show={showModal} onHide={modalClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Aluno</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <FormUpdate modalClose={modalClose} studentData= {studentData}/>
+                    </Modal.Body>
+                </Modal>
                 </section>
             </article>
         </Container>
